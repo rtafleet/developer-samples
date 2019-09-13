@@ -111,15 +111,6 @@ query {
 ## Vehicle Search Example Response
 
 ```javascript
-PS C:\dev\rta\developer-samples\NodeJS> node .\get-vehicles.js
-{
-  "data": {
-    "getVehicles": {
-      "vehicles": []
-    }
-  }
-}
-PS C:\dev\rta\developer-samples\NodeJS> node .\get-vehicles.js
 {
   "data": {
     "getVehicles": {
@@ -156,3 +147,7 @@ PS C:\dev\rta\developer-samples\NodeJS> node .\get-vehicles.js
   }
 }
 ```
+
+## `create-driver-report.js` - Creates a driver-reported issue on a vehicle
+
+The RTA API also supports creating a modifying data using a GraphQL concept called mutations. The `create-driver-report.js` example demoonstrates how to create a mutation to add a new defect reported on a vehicle.

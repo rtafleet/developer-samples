@@ -5,25 +5,30 @@ const getVehicles = async () => {
   const token = await getAuth.getToken()
 
   const graphQLQuery = {
-    query: `query {
-      getVehicles(tenantId:"${process.env.TENANT_ID}",facilityId: 1, queryOptions:{
-        filters : {
-          name:"make"      
-          operator: EQUALS
-          values:["FORD"]
-        }
-        pagination:{limit:10}
-      }) {
-        vehicles {
-          id
-          vehicleNumber
-          make
-          model
-          meters {
-            meterType
-            meter
+    query: `mutation {
+      createDriverReport(
+        tenantId:"${process.env.TENANT_ID}",
+        reportFacilityId:1,
+        vehicleId:"1FD0FA34EDA80BBA0EA76B30F8C7C008",
+        vehicleFacilityId: 1,
+        driver:"John",
+        meter:12345
+        type:PRE_TRIP,
+        defects: [
+          { 
+          location: "Front",
+          component: "Tires",
+          condition: "Treads exposed",
+          isOperable:false,
+          note:"I can see metal"
           }
-        }
+        ]
+      )
+      {
+        id
+        number
+        createdAt
+        
       }
     }`
   }
