@@ -8,7 +8,6 @@ const getVehicles = async () => {
     query: `mutation {
       createDriverReport(
         tenantId:"${process.env.TENANT_ID}",
-        reportFacilityId:1,
         vehicleId:"1FD0FA34EDA80BBA0EA76B30F8C7C008",
         vehicleFacilityId: 1,
         driver:"John",
