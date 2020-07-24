@@ -19,9 +19,23 @@ const getVehicles = async () => {
           vehicleNumber
           make
           model
+          status {
+            code
+            description
+            isAvailable
+            priority
+          }
           meters {
-            meterType
-            meter
+            meter {
+              reading
+              unitOfMeasure
+              lastPostedDate
+            }
+            fuelMeter {
+              reading
+              unitOfMeasure
+              lastPostedDate
+            }
           }
         }
       }
