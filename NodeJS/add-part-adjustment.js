@@ -9,13 +9,13 @@ const addPartAdjustment = async () => {
     query: `mutation addPartAdjustment {
 	addPartAdjustment(
 		input: {
-			tenantId: "RTA01267"
-			partId: "006EB9F456312B807AC210A071DCC63E"
+			tenantId: "foo"
+			partId: "bar"
 			binAQuantity: 3
-			authorizedBy: "ME"
-			etag: "batman"
+			authorizedBy: "user_name"
+			etag: "etag_of_part_you_fetched"
 			cost: 50
-			reason: "scooby"
+			reason: "reason_for_adjustment"
 		}
 	) {
 		id
