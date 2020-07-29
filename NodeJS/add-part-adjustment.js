@@ -7,57 +7,66 @@ const addPartAdjustment = async () => {
 
   const graphQLQuery = {
     query: `mutation addPartAdjustment {
-  addPartAdjustment(input: {tenantId: "foo", partId: "bar",  binAQuantity:3,  authorizedBy: "name", etag: "etag_of_part_you_are_adjusting", cost:50, reason: "scooby"}) {
-   
-      id
-      facilityId
-      partNumber
-      binLocation
-      description
-      vendorId
+	addPartAdjustment(
+		input: {
+			tenantId: "RTA01267"
+			partId: "006EB9F456312B807AC210A071DCC63E"
+			binAQuantity: 3
+			authorizedBy: "ME"
+			etag: "batman"
+			cost: 50
+			reason: "scooby"
+		}
+	) {
+		id
+		facilityId
+		partNumber
+		binLocation
+		description
+		vendorId
 		sellingPrice
 		meanCost
 		totalQuantity
-     	binA {
-				label
-				id
-				quantity
-				isEnabled
-			}
-			binB {
-				label
-				id
-				quantity
-				isEnabled
-			}
-			binC {
-				label
-				id
-				quantity
-				isEnabled
-			}
-			binD {
-				label
-				id
-				quantity
-				isEnabled
-			}
-			binE {
-				label
-				id
-				quantity
-				isEnabled
-			}
-      vmrs {
-        major
-        intermediate
-        minor
-        code
-      }
+		binA {
+			label
+			id
+			quantity
+			isEnabled
+		}
+		binB {
+			label
+			id
+			quantity
+			isEnabled
+		}
+		binC {
+			label
+			id
+			quantity
+			isEnabled
+		}
+		binD {
+			label
+			id
+			quantity
+			isEnabled
+		}
+		binE {
+			label
+			id
+			quantity
+			isEnabled
+		}
+		vmrs {
+			major
+			intermediate
+			minor
+			code
+		}
 		etag
-   
-  }
+	}
 }
+
 `
   }
 
