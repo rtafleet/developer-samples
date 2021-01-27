@@ -15,6 +15,7 @@ const createDriverReportedIssues = async () => {
         type:PRE_TRIP,
         defects: [
           { 
+          externalId: "id-of-defect-or-dvir",
           location: "Front",
           component: "Tires",
           condition: "Treads exposed",
