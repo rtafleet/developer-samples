@@ -1,7 +1,7 @@
 const rp = require('request-promise-native')
 const getAuth = require('./get-auth-token')
 
-const getVehicles = async () => {
+const createDriverReportedIssues = async () => {
   const token = await getAuth.getToken()
 
   const graphQLQuery = {
@@ -47,4 +47,4 @@ const getVehicles = async () => {
   console.log(formattedResponse)
 }
 
-getVehicles()
+createDriverReportedIssues()
